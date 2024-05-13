@@ -3,4 +3,5 @@ export interface IVehicle {
     year: number;
     make: string;
     model: string;
+    engine: string;
 }
