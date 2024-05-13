@@ -97,7 +97,7 @@ function Page() {
             <BlockFinder />
 
             <BlockBrands
-                layout="columns-8-full"
+                layout='columns-8-full'
                 brands={brands.data}
             />
 

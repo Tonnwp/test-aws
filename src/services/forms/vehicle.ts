@@ -5,7 +5,6 @@ import { useIntl } from 'react-intl';
 // application
 import { IVehicle } from '~/interfaces/vehicle';
 import { vehicleApi } from '~/api';
-import axios from 'axios';
 
 interface VehicleSelectItemDef<T = any> {
     key: string;
@@ -68,27 +67,6 @@ interface IOptions {
 }
 
 export default function useVehicleForm(options: IOptions = {}) {
-
-    const [vehicles, setVehicles] = useState<IVehicle[]>([]);
-    const [loading, setLoading] = useState<boolean>(true);
-    const [error, setError] = useState<string | null>(null);
-
-    useEffect(() => {
-        const fetchVehicles = async () => {
-            try {
-                const response = await axios.get('http://localhost:3001/api/vehicles');
-                setVehicles(response.data);
-            } catch (error) {
-                console.error('Error:', error);
-                setError(error.message);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchVehicles();
-    }, []);
-
 
     const intl = useIntl();
     const { onChange } = options;
