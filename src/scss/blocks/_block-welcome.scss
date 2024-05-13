@@ -1,0 +1,16 @@
+/*
+// .block-zone
+*/
+@import '../variables';
+@import '../constants';
+@import '../mixins/loader';
+@import '../mixins/direction';
+@import '../mixins/breakpoints';
+@import '../mixins/product-card';
+@import '../mixins/arrow';
+
+.header {
+    color: $font-color-red;
+    text-align: center;
+}
+
