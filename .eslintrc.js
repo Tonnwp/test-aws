@@ -26,6 +26,8 @@ module.exports = {
         },
     },
     rules: {
+        "react/no-unescaped-entities": "off",
+        "@next/next/no-page-custom-font": "off",
         indent: ['error', 4],
         'react/jsx-indent': ['error', 4],
         'react/jsx-indent-props': ['error', 4],
